@@ -5,7 +5,7 @@ In this project, the goal was to display the functionality of various javascript
 1. Download the zipped folder into your home directory or any other directory that is easily accessible
 2. Extract all the files
 3. Double-click on the home-otl.html file which will open the home page of the website in your browser
-####Navigating the Website
+#### Navigating the Website
 - On all the pages except the checkout page, you can access all other pages except the checkout page.
 - On the **homepage** you will see some images and a cool background as well as some text
 - The **about us** page is an attempt to appeal to the customer target market
@@ -13,6 +13,6 @@ In this project, the goal was to display the functionality of various javascript
 - The **shopping cart** page shows you all the items that you have added to the cart in the current session and allows you to apply coupons (**FIRSTBUY, ENDOFCOVID, IVAN_TEST**) as well as select the desirec shipping method
 - After proceeding to **checkout**, it will allow you to view the total amount due and upon confirming your order, you will be given a reference number and taken back to the home page.
 - There is also a **contact page**
-####Credits
+#### Credits
 This website and all the functionality was programmed by **Ivan Johannes**.
 The images were found at https://unsplash.com/   
