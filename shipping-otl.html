@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>👟 Shopping Cart - OTL</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles-otl.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <style>
+        .shoppingCartItem:hover {
+    		background-color: grey;
+    	}
+
+    	.row div {
+    		text-align: center;
+    		margin: auto;
+       	}
+
+		hr { 
+            position: relative; 
+            top: 0px; 
+            border: none; 
+            height: 1px; 
+            background: black; 
+            margin-bottom: 0px;
+			margin-top: 0px; 
+        }
+
+		.shoppingStats{
+			padding-left: 20px;
+			visibility: hidden;
+			position: absolute;
+		}
+
+		.shoppingStats div{
+			display: inline-block;
+			font-weight: bold;
+		} 
+    </style>
+    <script>
+        let curPage = "shipping";
+    </script>
+</head>
+
+<body onload="cartLoad()">
+    <header id="shipping_header">
+        <h1 class="top_ribbon"><a href="home-otl.html">ON THE LINE</a></h1>
+        <h2 class="sub_ribbon"><i>JUST DO IT...!</i></h2>
+    </header>
+    <nav id="home_navbar" class="main-nav">
+        <ul>
+            <li><a href="about_us-otl.html">ABOUT US</a></li>
+            <li><a href="catalogue-otl.html">CATALOGUE</a></li>
+            <li><a href="shipping-otl.html">SHOPPING CART</a></li>
+            <li><a href="contact_us-otl.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <div class="shoppingStats" id="shoppingStats">
+        <label for="shoppingTotal">Shopping Total: R</label>
+        <div id="shoppingTotal"></div>
+        <br>
+        <label for="vatDue">VAT: R</label>
+        <div id="vatDue"></div>
+        <br>
+        <hr>
+        <label for="totalDue">Total Due: R</label>
+        <div id="totalDue"></div>
+        <br>
+        <br>
+        <form>
+            <label for="userCoupon">COUPONS</label>
+            <input type="text" , id="userCoupon">
+            <button type="submit" id="couponSubmit" onclick="applyCoupons(this)">Apply Coupon</button>
+        </form>
+        <br>
+        <form>
+            <label for="shippingMethod"><b>Shipping Method</b></label><br>
+            <input type="radio" name="shippingMethod" value="free"> Free (8-10 Business Days)</input><br>
+            <input type="radio" name="shippingMethod" value="standard"> Standard - R100 (5-7 Business Days)</input><br>
+            <input type="radio" name="shippingMethod" value="express"> Express - R250 (1-2 Business Days)</input><br>
+            <input type="radio" name="shippingMethod" value="collection"> Collection (Only between 9:00-17:00 Business Days)</input><br><br>
+            <button type="submit" id="orderSubmit" onclick="location.href = 'checkout-otl.html';proceedCheckout()">Proceed to Checkout</button>
+        </form>
+    </div>
+    <div class="container-fluid" id="cartItems">
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-3">
+                <b>ITEM</b>
+            </div>
+            <div class="col-md-3">
+                <b>SIZE</b>
+            </div>
+            <div class="col-md-2">
+                <b>QTY</b>
+            </div>
+            <div class="col-md-2">
+                <b>REMOVE</b>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <script type="text/javascript" src="otl_javascript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>👟 Checkout - OTL</title>
+    <!-- Below is the link for bootstrap styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- As I'm not yet too familiar with bootstrap, I'll be using an external stylesheet as well -->
+    <link rel="stylesheet" href="styles-otl.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <style>
+        .shoppingStats div{
+			display: inline-block;
+			font-weight: bold;
+		} 
+    </style>
+    <script>
+        let curPage = "checkout";
+    </script>
+</head>
+
+<body>
+    <header id="checkout_header">
+        <h1 class="top_ribbon"><a href="home-otl.html">ON THE LINE</a></h1>
+        <h2 class="sub_ribbon"><i>JUST DO IT...!</i></h2>
+    </header>
+    <nav id="home_navbar" class="main-nav">
+        <ul>
+            <li><a href="shipping-otl.html">BACK TO SHOPPING CART</a></li>
+        </ul>
+    </nav>
+    <div class="shoppingStats" id="confirmShoppingStats">
+        <label for="confirmShoppingTotal">Shopping Total: R</label>
+        <div id="confirmShoppingTotal"></div>
+        <br>
+        <label for="confirmShippingDue">Shipping (Excl): R</label>
+        <div id="confirmShippingDue"></div>
+        <br>
+        <label for="confirmVatDue">VAT: R</label>
+        <div id="confirmVatDue"></div>
+        <br>
+        <hr>
+        <label for="confirmTotalDue">Total Due: R</label>
+        <div id="confirmTotalDue"></div>
+        <br>
+        <br>
+        <form>
+            <button type="submit" id="orderConfirm">CONFIRM ORDER</button>
+        </form>
+    </div>
+    <script type="text/javascript" src="otl_javascript.js"></script>
+</body>
+
+</html>
